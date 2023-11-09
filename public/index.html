@@ -1,79 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>page-home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-
-</head>
-
-<body style="background-color: #D0DAD5;">
-    <header>
-        <div class="logo">
-            <img src="public/img/Logo.jpg" alt="Renacimiento"> 
-            
-        </div>
-        <nav>
-            <a href="../index.html">Inicio</a>
-            <a href="#">Productos</a>
-            <a href="#">Servicios</a>
-            <a href="#">Acerca de nosotros</a>
-            <a href="#">Contacto</a>
+  <body>
+    <div class="fixed-top bg-ligth">
+      <div
+        class="bg-dark d-flex justify-content-center top-navbar justify-content-evenly align-items-center"
+      >
+        <span class="text-light"
+          >Visitanos en privada 5 de Febrero, San Pablo Autopan Toluca, Méx
+          <a href="" class="text-primary">Contáctanos</a></span
+        >
+        <span class="text-light"
+          >Llamanos al :
+          <a href="tel" class="text-primary">(+52) 7292284031</a></span
+        >
+      </div>
+      <header class="container bg-light">
+        <nav class="navbar navbar-expand-lg shadow-lg bg-body-tertiar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"
+              ><img
+                src="./img/logotipo.PNG"
+                alt="logotipo de la empresa"
+                class="icon-image"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item m-2">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Catalogo</a
+                  >
+                </li>
+                <li class="nav-item m-2">
+                  <a class="nav-link" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item m-2">
+                  <a class="nav-link" href="#">Cotizacion</a>
+                </li>
+                <li class="nav-item dropdown m-2">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Servicios
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Herrería</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Cortinas Metalicas</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Reparación</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item text-primary" href="#"
+                        >Slicitar presupuesto</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                  id="search"
+                />
+                <button class="btn" id="bnt_search">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </button>
+              </form>
+              <div class="m-4 d-flex">
+                <div class="align-items-center d-flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-cart3 m-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                    />
+                  </svg>
+                </div>
+                <div class="dropdown">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor btn dropdown-toggle"
+                    class="bi bi-person-circle m-4"
+                    viewBox="0 0 16 16"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                    />
+                  </svg>
+                  <ul class="dropdown-menu dropdown-menu-ligth">
+                    <li>
+                      <a class="dropdown-item" href="#">Mi cuenta</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Configuracion</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Compras</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Mis cotizaciones</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </nav>
-    </header>
-
-<main>
-    
-    <div class="login-container">
-        <h2>Iniciar sesión</h2>
-        <form action="submit" method="post">
-            <input type="text" placeholder="Nombre de usuario o correo electrónico" name="username" required><br>
-            <input type="password" placeholder="Contraseña" name="password" required><br>
-            <button type="submit" >Iniciar sesión</button>
-        </form>
-        <br>
-        <a href="inicio.html">¿Olvidaste tu contraseña?</a>
+      </header>
     </div>
-
-    <div class="sidebar">
-        <!-- Contenido del segundo cuadro (sidebar) -->
-        <h2>¿No tienes cuenta?</h2>
-        <p>Registrate para saber más de nuestros productos y servicios</p>
-        <br>
-        <a type="submit" href="pages/registroCliente.html" >Crear una cuenta</a>
-    </div>
-    
-</main>
-
-<div class="contenedor-flex">
-    <div class="recuadro">
-        <img src="img/ac.png" alt="Imagen 1">
-            <p>Atencion directa con nuestro personal todo el tiempo</p>
-    </div>
-    <div class="recuadro">
-        <img src="img/co.png" alt="Imagen 2">
-            <p>Cotizacion de nuestros productos o proyectos personales desde la comodidad de tu hogar</p>
-    </div>
-    <div class="recuadro">
-        <img src="img/cp.png" alt="Imagen 3">
-            <p>Tu propio espacio personal, comodo y seguro</p>
-    </div>
-</div>
-
-<footer>
-    <div class="container">
-        <div class="search-container">
-            <p>Quieres para recibir nuestras ultimas ofertas?</p>
-            <input type="text" id="searchInput" placeholder="Email">
-            <button onclick="buscar()">Subscribirse</button>
+    <div class="container container-wraper">
+      <article class="content">
+        <div
+          id="carouselExampleSlidesOnly"
+          class="carousel slide shadow-lg bg-body-tertiar"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./img/slider0.jpg"
+                class="d-block w-100 img-slider"
+                alt="Informacion de contacto"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./img/slider.jpg"
+                class="d-block w-100 img-slider"
+                alt="Cortina Metalica"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./img/slider1.jpg"
+                class="d-block w-100 img-slider"
+                alt="Cortina Multiperforada"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./img/slider2.png"
+                class="d-block w-100 img-slider"
+                alt="Cortina verde"
+              />
+            </div>
+          </div>
         </div>
+        <section class="container-content mt-5">
+          <h2>Nuevos Productos</h2>
+          <hr />
+          <div id="list-products" class="d-flex"></div>
+        </section>
+      </article>
     </div>
-</footer>
 
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/feching_data.js"></script>
+  </body>
 </html>

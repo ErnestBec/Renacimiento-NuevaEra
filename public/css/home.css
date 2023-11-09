@@ -1,0 +1,28 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.top-navbar {
+  height: 50px;
+}
+.icon-image {
+  width: 100px;
+}
+
+#search {
+  display: none;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.img-slider {
+  height: 600px;
+}
+.container-wraper {
+  margin-top: 208px;
+}
+.card_product {
+  width: 18rem;
+}

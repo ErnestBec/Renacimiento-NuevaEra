@@ -4,6 +4,7 @@ const helmet = require("helmet");
 const compression = require("compression");
 const morgan = require("morgan");
 const path = require("path");
+const cors = require("cors");
 //Utils
 const { AppError } = require("./utils/AppError");
 
@@ -20,6 +21,8 @@ const { viewsRouter } = require("./routes/views.routes");
 //Init App
 const app = express();
 app.use(express.json());
+// cors
+app.use(cors());
 
 //Set template engine
 // app.set("view engine", "pug");

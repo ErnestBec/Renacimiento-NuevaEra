@@ -33,6 +33,7 @@ const newProduct = catchAsync(async (req, res, next) => {
         `imgProducts/${Date.now()}_${file.originalname}`
       );
       const imgRes = await uploadBytes(imgRef, file.buffer);
+      console.log(imgRes.metadata.fullPath);
       return await ProductImgs.create({
         imgUrl: imgRes.metadata.fullPath,
         productId: newProduct.id,
@@ -40,7 +41,7 @@ const newProduct = catchAsync(async (req, res, next) => {
     });
     await Promise.all(filesPromises);
   }
-
+  // https://firebasestorage.googleapis.com/v0/b/ecommerce-ae422.appspot.com/imgProducts/1699490493456_chapaDobleCremon.jpg
   res.status(201).json({
     status: "Succes!!",
     newProduct,
